@@ -1,0 +1,183 @@
+Main container for the calendar .notion-calendar-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 20px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); */
+}
+
+.calendar-header-bootstrap {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.calendar-header-bootstrap .btn-group .btn {
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    color: #555;
+    font-weight: 500;
+}
+
+.calendar-header-bootstrap .btn-group .btn:hover {
+    background-color: #f7f7f7;
+}
+
+.calendar-title-bootstrap {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.native-date-input {
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.fc {
+    border: none;
+}
+
+.fc .fc-col-header-cell-cushion {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #888;
+    text-decoration: none !important;
+    /* Underline removal */
+    padding: 10px 4px;
+}
+
+.fc .fc-daygrid-day {
+    border: 1px solid #f0f0f0;
+    /* Default cell border */
+    position: relative;
+}
+
+.fc .fc-daygrid-day:hover {
+    background-color: #fafafa;
+}
+
+.fc .fc-daygrid-day-top {
+    display: flex;
+    position: relative !important;
+}
+
+.fc .fc-daygrid-day-number {
+    padding: 4px 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.day-sunday .fc-daygrid-day-number {
+    color: #ef4444;
+    /* Red for Sunday */
+}
+
+.day-saturday .fc-daygrid-day-number {
+    color: #3b82f6;
+    /* Blue for Saturday */
+}
+
+.day-today .fc-daygrid-day-number {
+    background-color: transparent !important;
+    color: #555 !important;
+    border-radius: 0 !important;
+    min-width: unset !important;
+    height: unset !important;
+    display: block !important;
+    text-align: right;
+    padding: 4px 6px !important;
+}
+
+.day-today {
+    background-color: #fffacd !important;
+    border: 1px solid #ffebcd !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+
+.fc .fc-daygrid-day.day-selected {
+    background-color: #e7f3ff !important;
+    /* 연한 파란색 배경 (원한다면 유지) */
+    box-shadow: inset 0 0 0 2px #3b82f6 !important;
+    /* 파란색 안쪽 테두리 효과 */
+    border-radius: 4px;
+    /* 테두리를 부드럽게 */
+
+}
+
+.fc .fc-daygrid-day.day-today.day-selected {
+    background-color: #e7f3ff !important;
+    /* 선택된 날짜의 연한 파란색 배경 유지 */
+    box-shadow: inset 0 0 0 2px #3b82f6 !important;
+    /* 선택된 날짜의 파란색 테두리 유지 */
+}
+
+/* --- Event Styling --- */
+.fc-event {
+    border-radius: 4px !important;
+    border-width: 1px !important;
+    padding: 2px 5px !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+    margin-bottom: 3px !important;
+}
+
+/* Trash zone styling */
+.calendar-trash-zone {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-size: 2rem;
+    z-index: 10000;
+    transition: all 0.2s ease-in-out;
+}
+
+.notion-calendar-container {
+    overflow-x: hidden;
+    /* 컨테이너 전체에서 가로 스크롤 제거 */
+}
+
+.fc-scrollgrid {
+    overflow-x: hidden !important;
+}
+
+.fc .fc-daygrid-day-frame {
+    min-height: 160px;
+    /* ✅ 하루 칸 높이 조절 */
+}
+
+.fc .fc-daygrid-event {
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+}
+
+.fc .fc-event {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    line-height: 1.1 !important;
+    min-height: 0 !important;
+}
+
+/* ✅ 완료된 일정 스타일 */
+.fc-event-done .fc-event-title {
+    text-decoration: line-through;
+    opacity: 0.8;
+    color: #6c757d !important;
+    /* Bootstrap의 text-muted 느낌 */
+}
+
+.fc-event-done {
+    opacity: 0.8;
+}
